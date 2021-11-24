@@ -21,7 +21,7 @@ local LocalPlayer = Players.LocalPlayer
 local PlayerGui = (RunService:IsStudio() and LocalPlayer:FindFirstChildWhichIsA("PlayerGui")) or game:GetService("CoreGui")
 local PlayerMouse = LocalPlayer:GetMouse()
 pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Luminential/releases/main/updated_credit_script", true))() end)
-local Windows = {[1] = (function() local Window = WallyLibraryV2:CreateWindow("Hız Hilesi", {["Parent"] = PlayerGui}); __applyCustom(Window); return Window; end)(),}
+local Windows = {[1] = (function() local Window = WallyLibraryV2:CreateWindow("Hiz Hilesi", {["Parent"] = PlayerGui}); __applyCustom(Window); return Window; end)(),}
 Slider = Windows[1]:Slider("Speed", {["flag"] = "max_speed", ["min"] = 50, ["max"] = 800}); Slider:Set(400)
 TextBox = Windows[1]:Box("KeyCode", {["flag"] = "activation_key"}, function(value) for _, EnumItem in pairs(Enum.KeyCode:GetEnumItems()) do if string.lower(value) == string.lower(EnumItem.Name) then TextBox.Text = EnumItem.Name; Windows[1]["flags"]["activation_key"] = EnumItem; return; end; end; for _, EnumItem in pairs(Enum.KeyCode:GetEnumItems()) do if string.lower(value) == string.lower(string.sub(EnumItem.Name, 1, string.len(value))) then TextBox.Text = EnumItem.Name; Windows[1]["flags"]["activation_key"] = EnumItem; return; end; end; TextBox.Text = "LeftShift"; Windows[1]["flags"]["activation_key"] = Enum.KeyCode.LeftShift; end);
 TextBox.Text = "LeftShift";
